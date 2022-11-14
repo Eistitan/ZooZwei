@@ -6,10 +6,8 @@ namespace ZooZwei
     {
         static void Main(string[] args)
         {
-            SW1();
+           SW1();
         }
-
-        
         static int Eingabe() //Eingabe der Zahl
         {
             int wahl = 0;
@@ -36,86 +34,52 @@ namespace ZooZwei
             string menu = Console.ReadLine().ToLower();
             return menu;
         }
-
         public static void SW1()
-        {   int wahl =Eingabe();
-            string menu="";
-            switch (wahl)
+        {   //Erstellung der Objekte auslagern? Schutzgrad
+            mammal pferd = new("Hans", "Horsus schnellus", 4, false, true, "rot", false, "auf der Weide", "B-7");
+            mammal tiger = new("Rappu", "Tigrus altus", 4, false, true, "gestreift", true, "im Tiger-Dome", "K-2");
+            reptile schildkroete = new("Leonardo", "Ninja turtle", 4, false, false, "grün", false, "in der Kanalisation", "S-1");
+            vogel storch = new("Bomber", "Langbeinus entus", 2, true, false, "grau", false, "auf dem Chimney", "U-8");
+            vogel gans = new("Verwüster", "Gansus enormus", 2, true, false, "blutrot", true, "in der Mensa", "M-3");
+
+            int wahl =Eingabe();
+            string menu = Menu2(); //<<<
+            switch (wahl,menu)
             {
-                case 1:
-                    mammal pferd = new("Hans", "Horsus schnellus", 4, false, true, "rot", false, "auf der Weide", "B-7");
-
-                    menu = Menu2();
-                    if (menu=="a")
-                    {
-                        pferd.Beschreibung();
-                    }else if (menu=="b")
-                        {
+                case (1,"a"):
+                       pferd.Beschreibung();
+                    break;
+                    case (1,"b"):
                         pferd.Wegbeschreibung(); 
-                        }
                     break;
-
-                case 2:
-                    mammal tiger = new("Rappu", "Tigrus altus", 4, false, true, "gestreift", true, "im Tiger-Dome", "K-2");
-
-                    menu = Menu2();
-                    if (menu == "a")
-                    {
+                case (2,"a"):
                         tiger.Beschreibung();
-                    }
-                    else if (menu == "b")
-                    {
+                    break;
+                    case (2,"b"):
                         tiger.Wegbeschreibung();
-                    }
                     break;
-                case 3:
-                    reptile schildkroete = new("Leonardo", "Ninja turtle", 4, false, false, "grün", false, "in der Kanalisation", "S-1");
-
-                    menu = Menu2();
-                    if (menu == "a")
-                    {
+                case (3,"a"):
                         schildkroete.Beschreibung();
-                    }
-                    else if (menu == "b")
-                    {
+                    break;
+                case (3, "b"):
                         schildkroete.Wegbeschreibung();
-                    }
                     break;
-                case 4:
-                    vogel storch = new("Bomber", "Langbeinus entus", 2, true, false, "grau", false, "auf dem Chimney", "U-8");
-
-                    menu = Menu2();
-                    if (menu == "a")
-                    {
+                case (4,"a"):
                         storch.Beschreibung();
-                    }
-                    else if (menu == "b")
-                    {
-                        storch.Wegbeschreibung();
-                    }
                     break;
-                case 5:
-                    vogel gans = new("Verwüster", "Gansus enormus", 2, true, false, "blutrot", true, "in der Mensa", "M-3");
-
-                    menu = Menu2();
-                    if (menu == "a")
-                    {
+                case (4, "b"):
+                        storch.Wegbeschreibung();
+                    break;
+                case (5,"a"):
                         gans.Beschreibung();
-                    }
-                    else if (menu == "b")
-                    {
+                    break;
+                case (5, "b"):
                         gans.Wegbeschreibung();
-                    }
                     break;
                 default:
                     Console.WriteLine("Sie haben sich verklickt, wieder.");
                     break;
             }
         }
-
-
-
-
-
     }
 }

@@ -14,7 +14,7 @@ namespace ZooZwei
         protected bool flug;
         protected bool fell;
         protected bool carnivoire;
-        protected string markierung; //??
+        protected string markierung; 
         protected string ort;
 
         public virtual void Beschreibung()
@@ -82,7 +82,7 @@ namespace ZooZwei
         public override void Beschreibung()
         {
             base.Beschreibung();
-            Console.WriteLine($"{name} ist ein Reptil.(Oder ein Nacktmull, die Wissenschaft ist sich nicht sicher.");
+            Console.WriteLine($"{name} ist ein Reptil.(Oder ein Nacktmull, die Wissenschaft ist sich nicht sicher).");
             Console.WriteLine($"{name} hat die Schuppen in der Farbe {scales}");
         }
         public override void Wegbeschreibung()
@@ -120,4 +120,5 @@ namespace ZooZwei
         }
 
     }
+    
 }
