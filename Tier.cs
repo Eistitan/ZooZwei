@@ -26,7 +26,6 @@ namespace ZooZwei
                 Console.WriteLine($"{name} ist flugfähig.");
             if (carnivoire == true)
                 Console.WriteLine($"Die Art {art} sind Raubtiere. Sie jagen gerne Touristen.");
-            
         }
 
         public virtual void Wegbeschreibung()
@@ -77,7 +76,6 @@ namespace ZooZwei
             this.art = art;
             this.ort = ort;
             this.markierung = mark;
-
         }
         public override void Beschreibung()
         {
@@ -106,7 +104,6 @@ namespace ZooZwei
             this.art = art;
             this.ort = ort;
             this.markierung = mark;
-
         }
         public override void Beschreibung()
         {
@@ -116,7 +113,6 @@ namespace ZooZwei
         public override void Wegbeschreibung()
         {
             base.Wegbeschreibung();
-            
         }
 
     }
